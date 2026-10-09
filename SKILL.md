@@ -15,6 +15,28 @@ credentials:
 
 AnySearch is a unified real-time search service supporting general web search, vertical domain search, parallel batch search, and full-page content extraction. The bundled cross-platform CLI tools call the public HTTP endpoints directly; no MCP server installation or JSON-RPC wrapper is required. Use the configured runtime directly for routine `search`, `batch_search`, `extract`, and `get_sub_domains` calls; run the `doc` command only when the CLI interface is unknown or recovery information is needed (see Recommended Entry Point).
 
+## 姊妹项目（8姊妹skill）
+
+| 项目 | 定位 | 角色 |
+|------|------|------|
+| **ai-video-editor** | AI视频剪辑框架（大脑/集成平台） | 🚢 航空母舰 |
+| **jianying-editor** | 剪映工程控制 | ✂️ 剪辑底层 |
+| **Pr-controls-skill** | Pr工程控制 | 🎬 专业剪辑 |
+| **Ps-controls-skill** | Photoshop控制 | 🖼️ 图像处理 |
+| **Comfyui-controls-skill** | ComfyUI智能管理 | 🚀 AI算力 |
+| **Blender-controls-skill** | Blender智能管理 | 🎨 3D特效 |
+| **remotion-controls-skill** | Remotion代码动画 | 💻 代码动画 |
+| **anysearch-skill** | 深度搜索（本项目） | 📡 情报搜索 |
+
+> 单体都能干活，任意组合互相增强。能力注册中心v3.2统一调度，智能路由选择最佳skill。
+
+## 核心能力（模块下沉后）
+
+本skill已接收ai-video-editor下沉的1个搜索模块，具备完整独立工作能力：
+
+- **灵感搜索**：anysearch_inspiration（视频创意/素材/参考搜索）
+- **统一搜索CLI**：anysearch_cli（23垂类领域+结构化输出+全文提取）
+
 ## Trigger
 
 This skill SHOULD be activated when the AI agent needs to perform any of the following:
