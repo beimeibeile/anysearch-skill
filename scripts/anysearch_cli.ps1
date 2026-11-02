@@ -7,9 +7,9 @@ Set-StrictMode -Version Latest
 $OutputEncoding = [System.Text.Encoding]::UTF8
 chcp 65001 | Out-Null
 
-# Identifies access mode + spec version to the backend (X-Anysearch-Client).
-# Keep the version aligned with SKILL.md `version`.
-$CLIENT_HEADER = "skill/3.0.1"
+# Identifies access mode + API protocol version to the backend (X-Anysearch-Client).
+# Protocol version tracks the official AnySearch skill (github.com/anysearch-ai/anysearch-skill); see docs/API_COMPATIBILITY.md.
+$CLIENT_HEADER = "skill/3.1.1"
 $SCRIPT_DIR = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
 function Load-Env {

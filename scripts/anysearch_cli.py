@@ -15,9 +15,9 @@ if sys.stdout.encoding != "utf-8":
 if sys.stderr.encoding != "utf-8":
     sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8", errors="replace")
 
-# Identifies access mode + spec version to the backend (X-Anysearch-Client).
-# Keep the version aligned with SKILL.md `version`.
-CLIENT_HEADER = "skill/3.0.1"
+# Identifies access mode + API protocol version to the backend (X-Anysearch-Client).
+# Protocol version tracks the official AnySearch skill (github.com/anysearch-ai/anysearch-skill); see docs/API_COMPATIBILITY.md.
+CLIENT_HEADER = "skill/3.1.1"
 
 def _load_env():
     """Load API keys from .env files near the skill.

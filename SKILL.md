@@ -15,6 +15,15 @@ credentials:
 
 AnySearch is a unified real-time search service supporting general web search, vertical domain search, parallel batch search, and full-page content extraction. The bundled cross-platform CLI tools call the public HTTP endpoints directly; no MCP server installation or JSON-RPC wrapper is required. Use the configured runtime directly for routine `search`, `batch_search`, `extract`, and `get_sub_domains` calls; run the `doc` command only when the CLI interface is unknown or recovery information is needed (see Recommended Entry Point).
 
+## 官方 API 依赖与兼容性（必读）
+
+本 Skill 为**自研版本**（仓库 `github.com/beimeibeile/anysearch-skill`），参照官方仓库（`github.com/anysearch-ai/anysearch-skill`）开发，**依赖官方公开 API（https://api.anysearch.com）**。
+
+- 当前客户端协议标识：`CLIENT_HEADER = skill/3.1.1`（对齐官方 v3.1.1，2026-09-02）
+- 自研包版本：`version: 3.1.0`（独立演进，与官方协议版本解耦）
+- ⚠️ **须持续关注官方 API 动向**：官方发布新 Release 或 API 出现端点/参数/垂类/限流策略变化时，须评估是否兼容更新。
+- 检查 SOP、版本对齐规则、开发/部署目录约定：见 `docs/API_COMPATIBILITY.md`。
+
 ## 姊妹项目（8姊妹skill）
 
 | 项目 | 定位 | 角色 |

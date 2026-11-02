@@ -238,7 +238,7 @@ def test_runtime(name, command, base_url):
     require(request["body"].get("params") == {"symbol": "AAPL"}, f"{name}: params were not translated")
     require(request["body"].get("max_results") == 10, f"{name}: REST max_results was not clamped to 10")
     require(not ({"domain", "sub_domain", "sub_domain_params"} & request["body"].keys()), f"{name}: legacy fields leaked to REST")
-    require(request["client"] == "skill/3.0.1", f"{name}: client header missing")
+    require(request["client"] == "skill/3.1.1", f"{name}: client header missing")
 
     STATE.reset()
     result = run(command, ["search", "fail"], base_url)
